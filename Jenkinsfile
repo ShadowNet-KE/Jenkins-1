@@ -536,23 +536,23 @@ pipeline {
     }
 
     // lock multiple stages into 1 concurrent execution using a parent stage
-    stage('Parent') {
-      options {
-        lock('something')
-      }
-      stages {
-        stage('one') {
-          steps {
-            sh '...'
-          }
-        }
-        stage('two') {
-          steps {
-            sh '...'
-          }
-        }
-      }
-    }
+//     stage('Parent') {
+//       options {
+//         lock('something')
+//       }
+//       stages {
+//         stage('one') {
+//           steps {
+//             sh '...'
+//           }
+//         }
+//         stage('two') {
+//           steps {
+//             sh '...'
+//           }
+//         }
+//       }
+//     }
 
     // alternative quick Pipeline to run just a single package of tests for quicker debugging and testing
     stage('Run Single Package Tests') {
